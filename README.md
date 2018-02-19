@@ -80,7 +80,7 @@ The environment you installed contains:
   the programming language that we will use;
 * [Atom](https://atom.io):
   the editor we will use.
-  On the first launch, Atom asks to install some missing modules.
+  On the first launch, Atom may ask to install some missing modules.
   **Do not forget to accept**, or your environment will be broken.
 
 Make sure that your [repository is up-to-date](https://help.github.com/articles/syncing-a-fork/)
