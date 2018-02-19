@@ -69,7 +69,7 @@ You also have to:
 * Run the following script to install dependencies:
 
   ```sh
-    curl -s https://raw.githubusercontent.com/cui-unige/semantique/master/bin/install | bash /dev/stdin
+    curl -s https://raw.githubusercontent.com/cui-unige/semantique/master/install | bash /dev/stdin
   ```
 
 The environment you installed contains:
