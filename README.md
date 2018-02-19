@@ -102,3 +102,4 @@ by running frequently:
 ## Homework
 
 * All homeworks are located in the `homework/` directory.
+* Use the command `swift test` to test your work.
