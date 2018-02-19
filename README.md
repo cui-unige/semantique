@@ -9,6 +9,7 @@ such as new exercises, homework, slides or fixes.
 
 * [Page on Moodle](https://moodle.unige.ch/course/view.php?id=182)
 * [Page on GitHub](https://github.com/cui-unige/semantique)
+* [The Anzen Programming Language](https://github.com/kyouko-taiga/anzen)
 * Courses are Tuesday 10:00 - 12:00
 * Exercises are Monday 16:00 - 18:00
 
