@@ -19,6 +19,7 @@ if [ -f "/etc/lsb-release" ]; then
         tar xf swift-4.0.3-RELEASE-ubuntu16.04.tar.gz \
             --strip-components=1 \
             -C /
+        chmod -R a+r /usr/lib/swift/
         rm   -f swift-4.0.3-RELEASE-ubuntu16.04.tar.gz*
         curl -L https://atom.io/download/deb --output atom-amd64.deb
         dpkg -i atom-amd64.deb || apt-get -f install --yes
