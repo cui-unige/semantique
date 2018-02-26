@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+docker run --cap-add sys_ptrace --rm --entrypoint=/bin/bash --volume $PWD:/data swift:4.0 -c "cd /data && swift build"

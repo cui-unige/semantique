@@ -1,0 +1,71 @@
+#! /usr/bin/env bash
+
+set -e
+set -x
+port=${1:-2222}
+
+# Clean:
+VBoxManage controlvm "semantique" \
+  poweroff \
+  || true
+VBoxManage unregistervm "semantique" \
+  --delete \
+  || true
+
+cp "semantique.vmdk" \
+   "semantique-2018.vmdk"
+
+# Launch the virtual machine:
+VBoxManage createvm \
+  --name "semantique" \
+  --ostype "Ubuntu_64" \
+  --register
+VBoxManage storagectl "semantique" \
+  --name "IDE Controller" \
+  --add "ide" \
+  --bootable "on"
+VBoxManage modifyvm "semantique" \
+  --description "Sémantique @ UniGe" \
+  --memory 1024 \
+  --cpus 1 \
+  --hda "semantique-2018.vmdk" \
+  --natpf1 ssh,tcp,,${port},,22
+VBoxManage startvm "semantique" \
+  --type "headless"
+
+# Remove everything:
+ssh \
+    -o "UserKnownHostsFile=/dev/null" \
+    -o "StrictHostKeyChecking=no" \
+    -i "vm-key" \
+    -p "${port}" \
+  semantique@localhost \
+  'bash -s' <<'EOS'
+rm -rf *
+EOS
+
+# Copy files:
+scp -r \
+    -o "UserKnownHostsFile=/dev/null" \
+    -o "StrictHostKeyChecking=no" \
+    -i "vm-key" \
+    -P "${port}" \
+  install Package.swift Sources Tests \
+  semantique@localhost:
+
+# Install dependencies:
+ssh \
+    -o "UserKnownHostsFile=/dev/null" \
+    -o "StrictHostKeyChecking=no" \
+    -i "vm-key" \
+    -p "${port}" \
+  semantique@localhost \
+  'bash -s' <<'EOS'
+swift --version || ./install
+swift test
+EOS
+
+VBoxManage controlvm "semantique" \
+  poweroff
+VBoxManage unregistervm "semantique" \
+  --delete
