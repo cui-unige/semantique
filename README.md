@@ -10,6 +10,7 @@ such as new exercises, homework, slides or fixes.
 * [Page on Moodle](https://moodle.unige.ch/course/view.php?id=182)
 * [Page on GitHub](https://github.com/cui-unige/semantique)
 * [The Anzen Programming Language](https://github.com/kyouko-taiga/anzen)
+* [The LogicKit Library](https://github.com/kyouko-taiga/LogicKit)
 * Courses are Tuesday 10:00 - 12:00
 * Exercises are Monday 16:00 - 18:00
 
@@ -103,5 +104,30 @@ by running frequently:
 
 ## Homework
 
-* All homeworks are located in the `homework/` directory.
 * Use the command `swift test` to test your work.
+
+### Homework #1
+
+The goal of this homework is to implement the propagation of constant
+expressions within Anzen module declarations.
+You have to perform propagation in two ways:
+
+* by updating the abstract syntax tree directly, using a visitor;
+* by filling a knowledge base in logic programming.
+
+Evaluation will be:
+
+* have you done anything at the deadline?
+  (yes: 1 point, no: 0 point)
+  * [ ] Done anything
+* have you correctly written your code?
+  (yes: 1 point, no: 0 point)
+  * [ ] Coding standards
+* have you understood and implemented all the required notions?
+  (all: 4 points, none: 0 point)
+  * [ ] Update of module
+  * [ ] Knowledge base
+
+| Grade |
+| ----- |
+|       |

@@ -3,17 +3,24 @@ import XCTest
 
 class semantiqueTests: XCTestCase {
 
-    func test1() throws {
+    func testExercises1() throws {
         do {
-            let module = try parse(what: example1)
-            print(module.debugDescription)
+            for expression in expressions {
+                let module = try parse(what: expression)
+                print(module.debugDescription)
+            }
         } catch let e {
             print(e)
             throw e
         }
     }
 
+    func testHomework1() throws {
+        // TODO
+    }
+
     static var allTests = [
-        ("test1", test1),
+        ("Exercises #1", testExercises1),
+        ("Homework #1", testHomework1),
     ]
 }
