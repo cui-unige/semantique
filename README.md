@@ -64,14 +64,15 @@ You also have to:
   git remote add upstream https://github.com/cui-unige/semantique.git
   ```
 
-* [Add as collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
-  the users: [`saucisson`](https://github.com/saucisson) (Alban Linard)
-  and [`didierbuchs`](https://github.com/didierbuchs) (Didier Buchs).
 * Run the following script to install dependencies:
 
   ```sh
-    curl -s https://raw.githubusercontent.com/cui-unige/semantique/master/install | bash /dev/stdin
+    ./install
   ```
+
+* [Add as collaborators](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
+  the users: [`saucisson`](https://github.com/saucisson) (Alban Linard)
+  and [`didierbuchs`](https://github.com/didierbuchs) (Didier Buchs).
 
 The environment you installed contains:
 * [Git](https://git-scm.com/docs/gittutorial):
