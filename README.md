@@ -11,8 +11,8 @@ such as new exercises, homework, slides or fixes.
 * [Page on GitHub](https://github.com/cui-unige/semantique)
 * [The Anzen Programming Language](https://github.com/kyouko-taiga/anzen)
 * [The LogicKit Library](https://github.com/kyouko-taiga/LogicKit)
-* Courses are Tuesday 10:00 - 12:00
-* Exercises are Monday 16:00 - 18:00
+* Courses are Monday 16:00 - 18:00
+* Exercises are Tuesday 10:00 - 12:00
 
 ## Environment
 
