@@ -1,17 +1,11 @@
 import AnzenLib
 import AnzenAST
 import LogicKit
-import Foundation
 
 // Parse a program:
 // https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/Parser.swift
 func parse(what: String) throws -> ModuleDecl {
     return try AnzenLib.parse(text: what + "\n")
-}
-
-// https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/ASTVisitor.swift
-class PropagateConstantsVisitor : ASTVisitor {
-  // TODO
 }
 
 // Evaluate all constant expressions in a module:
@@ -38,6 +32,9 @@ func logic_constants(module: ModuleDecl) -> KnowledgeBase {
 let expressions = [
   """
   let x = 1
+  """,
+  """
+  let x = 1 + 2
   """,
   """
   let x = 1 + 2 * 3 - 4
