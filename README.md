@@ -91,6 +91,7 @@ by running frequently:
 ```sh
   git fetch upstream
   git merge upstream/master
+  rm -rf .build Package.resolved
 ```
 
 ## Rules
