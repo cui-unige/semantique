@@ -128,7 +128,8 @@ You have to handle the following constructions in the abstract syntax tree:
 * `BinExpr`;
 * `UnExpr`;
 * `FunDecl`;
-* `CallExpr`.
+* `CallExpr`;
+* and of course the other classes that are used by the ones listed above.
 
 Evaluation will be:
 
