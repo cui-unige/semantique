@@ -16,7 +16,16 @@ class semantiqueTests: XCTestCase {
     }
 
     func testHomework1() throws {
-        // TODO
+      do {
+          for expression in expressions {
+              let module = try parse(what: expression)
+              let _      = propagate_constants(module: module)
+              print(module.debugDescription)
+          }
+      } catch let e {
+          print(e)
+          throw e
+      }
     }
 
     static var allTests = [
