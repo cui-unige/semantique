@@ -111,10 +111,8 @@ by running frequently:
 
 The goal of this homework is to implement the propagation of constant
 expressions within Anzen module declarations.
-You have to perform propagation in two ways:
-
-* by updating the abstract syntax tree directly, using a visitor;
-* by filling a knowledge base in logic programming.
+You have to perform propagation by updating the abstract syntax tree directly,
+using a visitor.
 
 You have to handle the following constructions in the abstract syntax tree:
 
