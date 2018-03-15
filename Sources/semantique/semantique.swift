@@ -10,41 +10,41 @@ func parse(what: String) throws -> ModuleDecl {
 
 // Evaluate all constant expressions in a module:
 func propagate_constants(module: ModuleDecl) -> ModuleDecl {
-  var visitor = PropagateConstantsVisitor()
-  try! visitor.visit(module)
-  return module
+    var visitor = PropagateConstantsVisitor()
+    try! visitor.visit(module)
+    return module
 }
 
 // https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/ASTVisitor.swift
 class LogicConstantsVisitor : ASTVisitor {
-  var knowledge : KnowledgeBase = []
-  // TODO
+    var knowledge : KnowledgeBase = []
+    // TODO
 }
 
 // https://github.com/kyouko-taiga/LogicKit
 func logic_constants(module: ModuleDecl) -> KnowledgeBase {
-  var visitor = LogicConstantsVisitor()
-  try! visitor.visit(module)
-  return visitor.knowledge
+    var visitor = LogicConstantsVisitor()
+    try! visitor.visit(module)
+    return visitor.knowledge
 }
 
 // https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/AST.swift
 let expressions = [
-  """
-  let x = 1
-  """,
-  """
-  let x = 1 + 2
-  """,
-  """
-  let x = 1 + 2 * 3 - 4
-  """,
-  """
-  let x = 1
-  let y = x + 2
-  """,
-  """
-  var x = true
-  x = x and false
-  """,
+    """
+    let x = 1
+    """,
+    """
+    let x = 1 + 2
+    """,
+    """
+    let x = 1 + 2 * 3 - 4
+    """,
+    """
+    let x = 1
+    let y = x + 2
+    """,
+    """
+    var x = true
+    x = x and false
+    """,
 ]
