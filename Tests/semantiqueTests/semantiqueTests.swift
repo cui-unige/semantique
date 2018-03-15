@@ -18,9 +18,10 @@ class semantiqueTests: XCTestCase {
     func testHomework1() throws {
       do {
           for expression in expressions {
+              print("Before: ", expression)
               let module = try parse(what: expression)
               let _      = propagate_constants(module: module)
-              print(module.debugDescription)
+              print("After:  ", module)
           }
       } catch let e {
           print(e)
