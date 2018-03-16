@@ -44,7 +44,27 @@ let expressions = [
     let y = x + 2
     """,
     """
+    let x = 1
+    let y = -x + 2
+    """,
+    """
     var x = true
     x = x and false
+    """,
+    """
+    var x = 2
+    var y = 2
+    if x == y {
+      y = x
+    } else {
+      x = y
+    }
+    """,
+    """
+    var x = 2
+    fun f(_ a: Int) -> Int {
+      return a * x
+    }
+    let y = f(x) * x
     """,
 ]
