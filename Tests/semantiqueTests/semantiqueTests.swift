@@ -70,4 +70,8 @@ class semantiqueTests: XCTestCase {
       }
     }
 
+    static var allTests = [
+        ("testLogic", testLogic),
+     ]
+
 }
