@@ -145,3 +145,43 @@ Evaluation will be:
 | Grade |
 | ----- |
 |       |
+
+### Homework #2
+
+The goal of this homework is to implement the checking of type correctness
+within Anzen module declarations.
+You have to perform the check by creating a logic program using LogicKit
+within a visitor.
+The logic program must  return at least one answer if the typing is correct,
+and no answer if the typing is incorrect.
+
+You have to handle the following constructions in the abstract syntax tree:
+
+* `ModuleDecl`;
+* `Literal<Bool>`;
+* `Literal<Int>`;
+* `Literal<String>`;
+* `PropDecl`;
+* `BindingStmt`;
+* `IfExpr`;
+* `BinExpr`;
+* `UnExpr`;
+* `FunDecl`;
+* `CallExpr`;
+* and of course the other classes that are used by the ones listed above.
+
+Evaluation will be:
+
+* have you done anything at the deadline?
+  (yes: 1 point, no: 0 point)
+  * [ ] Done anything
+* have you correctly written your code?
+  (yes: 1 point, no: 0 point)
+  * [ ] Coding standards
+* have you understood and implemented all the required notions?
+  (all: 4 points, none: 0 point)
+  * [ ] Knowledge base
+
+| Grade |
+| ----- |
+|       |
