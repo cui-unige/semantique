@@ -22,10 +22,10 @@ class LogicConstantsVisitor : ASTVisitor {
 }
 
 // https://github.com/kyouko-taiga/LogicKit
-func logic_constants(module: ModuleDecl) -> KnowledgeBase {
-    var visitor = LogicConstantsVisitor()
+func type_correctness(module: ModuleDecl) -> KnowledgeBase {
+    var visitor = CheckTypesVisitor()
     try! visitor.visit(module)
-    return visitor.knowledge
+    return visitor.kb
 }
 
 // https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/AST.swift
@@ -34,14 +34,20 @@ let expressions = [
     let x = 1
     """,
     """
+    let x : Int = 1
+    """,
+    """
     let x = 1 + 2
     """,
     """
     let x = 1 + 2 * 3 - 4
     """,
     """
+    let x : Bool = 1 + 2 * 3 - 4
+    """,
+    """
     let x = 1
-    let y = x + 2
+    let y : Int = x + 2
     """,
     """
     let x = 1
@@ -65,6 +71,6 @@ let expressions = [
     fun f(_ a: Int) -> Int {
       return a * x
     }
-    let y = f(x) * x
+    let y : Bool = f(x) * x
     """,
 ]
