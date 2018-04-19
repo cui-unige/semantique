@@ -185,3 +185,40 @@ Evaluation will be:
 | Grade |
 | ----- |
 |       |
+
+### Homework #3
+
+The goal of this homework is to implement an interpreter of the Anzen
+programming language.
+You have to perform interpretation in Swift (not LogicKit) within a visitor.
+
+You have to handle the following constructions in the abstract syntax tree:
+
+* `ModuleDecl`;
+* `Literal<Bool>`;
+* `Literal<Int>`;
+* `Literal<String>`;
+* `PropDecl`;
+* `BindingStmt`;
+* `IfExpr`;
+* `BinExpr`;
+* `UnExpr`;
+* `FunDecl`;
+* `CallExpr`;
+* and of course the other classes that are used by the ones listed above.
+
+Evaluation will be:
+
+* have you done anything at the deadline?
+  (yes: 1 point, no: 0 point)
+  * [ ] Done anything
+* have you correctly written your code?
+  (yes: 1 point, no: 0 point)
+  * [ ] Coding standards
+* have you understood and implemented all the required notions?
+  (all: 4 points, none: 0 point)
+  * [ ] Knowledge base
+
+| Grade |
+| ----- |
+|       |
