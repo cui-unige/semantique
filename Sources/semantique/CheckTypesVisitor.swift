@@ -2,18 +2,6 @@ import AnzenLib
 import AnzenAST
 import LogicKit
 
-extension PropDecl: Hashable {
-
-  public var hashValue: Int {
-    return 0
-  }
-
-  public static func == (lhs: PropDecl, rhs: PropDecl) -> Bool {
-    return lhs === rhs
-  }
-
-}
-
 // https://github.com/kyouko-taiga/anzen/blob/master/Sources/AnzenAST/ASTVisitor.swift
 struct CheckTypesVisitor: ASTVisitor {
 
