@@ -217,7 +217,46 @@ Evaluation will be:
   * [ ] Coding standards
 * have you understood and implemented all the required notions?
   (all: 4 points, none: 0 point)
-  * [ ] Knowledge base
+  * [ ] Answers
+
+| Grade |
+| ----- |
+|       |
+
+### Homework #4
+
+The goal of this homework is to implement a check of accesses to references
+for the Anzen programming language.
+You have to perform interpretation in Swift (not LogicKit) within a visitor.
+Remember that Anzen has three operators: `=` for copy, `&-` for reference,
+and `<-` for ownership.
+
+You have to handle the following constructions in the abstract syntax tree:
+
+* `ModuleDecl`;
+* `Literal<Bool>`;
+* `Literal<Int>`;
+* `Literal<String>`;
+* `PropDecl`;
+* `BindingStmt`;
+* `IfExpr`;
+* `BinExpr`;
+* `UnExpr`;
+* `FunDecl`;
+* `CallExpr`;
+* and of course the other classes that are used by the ones listed above.
+
+Evaluation will be:
+
+* have you done anything at the deadline?
+  (yes: 1 point, no: 0 point)
+  * [ ] Done anything
+* have you correctly written your code?
+  (yes: 1 point, no: 0 point)
+  * [ ] Coding standards
+* have you understood and implemented all the required notions?
+  (all: 4 points, none: 0 point)
+  * [ ] Answers
 
 | Grade |
 | ----- |
